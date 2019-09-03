@@ -1,11 +1,11 @@
-﻿#Script pour le logiciel de stockage de mot de passe
-#presentation de l'utilisation des différentes libs:
-#utilisation de la lib tkinter pour l'interface graphique
-#utilisation de sqlite3 pour les bases de données
-#utilisation de bcrypt pour le hashage
-#utilisation de crypto pour chiffrer/déchiffrer
-#utilisation de dropbox pour l'importation/exportation de bdd
-#utilisation de gtts+playsound pour synthse vocale+jouer le son
+#Script for password storage software
+#presentation of the use of the different libs:
+#use of the tkinter lib for the graphical interface
+#use of sqlite3 for databases
+#use of bcrypt for hashage
+#use of crypto to encrypt/decrypt
+#use of dropbox for the import/export of bdd
+#use of gtts+playsound for voice synthesis+playing sound
 from tkinter import *
 from tkinter import font
 import time
@@ -241,48 +241,48 @@ def encrypt_test():
         title2_2.pack()
         
 def main():
-  open=Opening()
-  open.hash()
-  svocal=Vocal()
-  svocal.synthese()
-  sqlite=Bdd()
-  global identify
-  global mail
-  global police2
-  global voice
-  police=font.Font(family='Arial',size=25,weight='bold')
-  police2=font.Font(family='Arial',size=10,weight='bold')
-  photo = PhotoImage(file='logo.png')
-  logo = Button(window,image=photo,bg=color_background,fg='white',width = 1000,height=100,borderwidth=0,font=police)
-  title = Button(window,text="STOCK",bg=color_background,fg='white',width = 1000,height=1,borderwidth=0,font=police)
-  saut_ligne = Button(window,text="Your email",bg=color_background,fg='white',width = 100,height=3,borderwidth=0,font=police2)
-  saut_ligne1 = Button(window,text="Your ID",bg=color_background,fg='white',width = 100,height=3,borderwidth=0,font=police2)
-  button_active = Button(window, text="view your password",bg="black",fg='white',width = 40,height=2,borderwidth=0,command=decrypt,font=police2)
-  saut_ligne3 = Button(window,bg=color_background,fg='white',width = 100,height=3,borderwidth=0,font=police2)
-  saut_ligne4 = Button(window,bg=color_background,fg='white',width = 100,height=3,borderwidth=0,font=police2)
-  saut_ligne5 = Button(window,bg=color_background,fg='white',width = 100,height=3,borderwidth=0,font=police2)
-  identife=Entry(window,show="*",textvariable=identify,width=30)
-  window.title("STOCK|software password")
-  logo.pack()
-  title.pack()
-  saut_ligne.pack()
-  mail_entry=Entry(window,textvariable=mail,width=30)
-  mail_entry.pack()
-  saut_ligne1.pack()
-  identife=Entry(window,show="*",textvariable=identify,width=30)
-  identife.pack()
-  saut_ligne4.pack()
-  button_active.pack()
-  saut_ligne3.pack()
-  valide_voice= Checkbutton(window, text="say the password (voice synthesis)",background=color_background,variable=voice)
-  valide_voice.pack()
-  window.configure(background=color_background)
-  window.geometry('850x690+0+10')
-  window.iconbitmap(r"nuage.ico")
-  window.resizable(0,0)
-  encrypt()
-  window.mainloop()
-  sqlite.end_program()
+    open=Opening()
+    open.hash()
+    svocal=Vocal()
+    svocal.synthese()
+    sqlite=Bdd()
+    global identify
+    global mail
+    global police2
+    global voice
+    police=font.Font(family='Arial',size=25,weight='bold')
+    police2=font.Font(family='Arial',size=10,weight='bold')
+    photo = PhotoImage(file='logo.png')
+    logo = Button(window,image=photo,bg=color_background,fg='white',width = 1000,height=100,borderwidth=0,font=police)
+    title = Button(window,text="STOCK",bg=color_background,fg='white',width = 1000,height=1,borderwidth=0,font=police)
+    saut_ligne = Button(window,text="Your email",bg=color_background,fg='white',width = 100,height=3,borderwidth=0,font=police2)
+    saut_ligne1 = Button(window,text="Your ID",bg=color_background,fg='white',width = 100,height=3,borderwidth=0,font=police2)
+    button_active = Button(window, text="view your password",bg="black",fg='white',width = 40,height=2,borderwidth=0,command=decrypt,font=police2)
+    saut_ligne3 = Button(window,bg=color_background,fg='white',width = 100,height=3,borderwidth=0,font=police2)
+    saut_ligne4 = Button(window,bg=color_background,fg='white',width = 100,height=3,borderwidth=0,font=police2)
+    saut_ligne5 = Button(window,bg=color_background,fg='white',width = 100,height=3,borderwidth=0,font=police2)
+    identife=Entry(window,show="*",textvariable=identify,width=30)
+    window.title("STOCK|software password")
+    logo.pack()
+    title.pack()
+    saut_ligne.pack()
+    mail_entry=Entry(window,textvariable=mail,width=30)
+    mail_entry.pack()
+    saut_ligne1.pack()
+    identife=Entry(window,show="*",textvariable=identify,width=30)
+    identife.pack()
+    saut_ligne4.pack()
+    button_active.pack()
+    saut_ligne3.pack()
+    valide_voice= Checkbutton(window, text="say the password (voice synthesis)",background=color_background,variable=voice)
+    valide_voice.pack()
+    window.configure(background=color_background)
+    window.geometry('850x690+0+10')
+    window.iconbitmap(r"nuage.ico")
+    window.resizable(0,0)
+    encrypt()
+    window.mainloop()
+    sqlite.end_program()
 
 if __name__ == '__main__':
     main()
