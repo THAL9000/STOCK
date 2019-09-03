@@ -1,8 +1,8 @@
-#STOCK
+# STOCK
 
 STOCK is a password management software that is designed to be secure
 
-##USE
+## USE
 
 ```
 git clone https://github.com/THAL9000/STOCK.git
@@ -13,6 +13,6 @@ python3 main.py
 
 ```
 
-##ENCRYPT
+## ENCRYPT
 
 the software uses the AES encryption system to encrypt your passwords
