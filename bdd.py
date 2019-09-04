@@ -7,7 +7,7 @@ class Bdd:
         self.connexion.close()
     def hash_bdd(self):
         curseur=self.connexion.cursor()
-        curseur.execute("SELECT hash FROM cochon")
+        curseur.execute("SELECT hash FROM hash_user")
         result = curseur.fetchone()
         hash = result[0]
         self.connexion.commit()
