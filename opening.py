@@ -24,6 +24,6 @@ class Opening:
             else:
                choix_encode=choix.encode("utf-8")
                hashed = bcrypt.hashpw(choix_encode, bcrypt.gensalt())
-               curseur.execute('''CREATE TABLE IF NOT EXISTS cochon(hash TEXT)''')
-               curseur.execute('''INSERT INTO cochon (hash) VALUES (?)''', [hashed])
+               curseur.execute('''CREATE TABLE IF NOT EXISTS hash_user(hash TEXT)''')
+               curseur.execute('''INSERT INTO hash_user (hash) VALUES (?)''', [hashed])
                connexion.commit()
