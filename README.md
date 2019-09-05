@@ -13,6 +13,6 @@ python3 main.py
 
 ```
 
-## ENCRYPT
+## CYPHER
 
 the software uses the AES encryption system to encrypt your passwords
